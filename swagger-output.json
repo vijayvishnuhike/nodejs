@@ -1,0 +1,271 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Carequality APIs",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/patientdata": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "givenName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "familyName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "dob",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/ccdaexport": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patientid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "inpatient",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "documenttype",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/labresult": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patientid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/encounter": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patient",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/imageresult": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patientid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/clinicaldocument": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patientid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/documents": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "practiceid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "patientid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "departmentid",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
